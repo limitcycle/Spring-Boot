@@ -1,0 +1,24 @@
+
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    mode: HTML
+  devtools:
+    restart:
+      trigger-file: .trigger
+
+
+
+book:
+  name: Java 技術手冊
+  author: 良葛格
+  isbn: ${random.uuid}
+  description: ${book.name} ,這本書還不錯
+
+
+# application-{pro}.yml
+
+
+
+
