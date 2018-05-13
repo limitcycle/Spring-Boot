@@ -1,0 +1,929 @@
+2018-05-13 16:38:41.447  INFO 13372 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Starting SpringBootBasicApplication on chenjianhongde-MacBook-Air.local with PID 13372 (/Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic/target/classes started by jhchen in /Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic)
+2018-05-13 16:38:41.449  INFO 13372 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : The following profiles are active: dev
+2018-05-13 16:38:41.605  INFO 13372 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1a363464: startup date [Sun May 13 16:38:41 CST 2018]; root of context hierarchy
+2018-05-13 16:38:44.509  INFO 13372 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cfb0a75c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-13 16:38:45.198  INFO 13372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-05-13 16:38:45.265  INFO 13372 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-13 16:38:45.266  INFO 13372 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-13 16:38:45.285  INFO 13372 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/jhchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-05-13 16:38:45.585  INFO 13372 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-13 16:38:45.585  INFO 13372 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3981 ms
+2018-05-13 16:38:45.816  INFO 13372 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-13 16:38:45.825  INFO 13372 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-13 16:38:45.825  INFO 13372 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-13 16:38:45.826  INFO 13372 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-13 16:38:45.826  INFO 13372 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-13 16:38:46.197  INFO 13372 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-13 16:38:46.709  INFO 13372 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-13 16:38:46.839  INFO 13372 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-13 16:38:46.901  INFO 13372 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-13 16:38:47.208  INFO 13372 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-13 16:38:47.212  INFO 13372 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-13 16:38:47.347  INFO 13372 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-13 16:38:47.783  INFO 13372 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-13 16:38:48.609  INFO 13372 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 16:38:49.173  WARN 13372 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookRestController': Unsatisfied dependency expressed through field 'bookService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookService': Unsatisfied dependency expressed through field 'bookResitory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookResitory': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.example.basic.domain.Book
+2018-05-13 16:38:49.174  INFO 13372 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 16:38:49.176  INFO 13372 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-13 16:38:49.193  INFO 13372 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-13 16:38:49.200  INFO 13372 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-05-13 16:38:49.241  INFO 13372 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-05-13 16:38:49.257 ERROR 13372 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookRestController': Unsatisfied dependency expressed through field 'bookService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookService': Unsatisfied dependency expressed through field 'bookResitory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookResitory': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.example.basic.domain.Book
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at com.example.basic.SpringBootBasicApplication.main(SpringBootBasicApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_172]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_172]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_172]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_172]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookService': Unsatisfied dependency expressed through field 'bookResitory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookResitory': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.example.basic.domain.Book
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookResitory': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.example.basic.domain.Book
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1702) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 37 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.example.basic.domain.Book
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:472) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:73) ~[spring-data-jpa-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:181) ~[spring-data-jpa-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:119) ~[spring-data-jpa-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:102) ~[spring-data-jpa-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:298) ~[spring-data-commons-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$3(RepositoryFactoryBeanSupport.java:287) ~[spring-data-commons-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:141) ~[spring-data-commons-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.util.Lazy.get(Lazy.java:63) ~[spring-data-commons-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:290) ~[spring-data-commons-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:102) ~[spring-data-jpa-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 47 common frames omitted
+
+2018-05-13 16:40:19.709  INFO 13484 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Starting SpringBootBasicApplication on chenjianhongde-MacBook-Air.local with PID 13484 (/Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic/target/classes started by jhchen in /Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic)
+2018-05-13 16:40:19.711  INFO 13484 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : The following profiles are active: dev
+2018-05-13 16:40:19.807  INFO 13484 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4731d071: startup date [Sun May 13 16:40:19 CST 2018]; root of context hierarchy
+2018-05-13 16:40:22.416  INFO 13484 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a556261d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-13 16:40:22.982  INFO 13484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-05-13 16:40:23.035  INFO 13484 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-13 16:40:23.037  INFO 13484 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-13 16:40:23.056  INFO 13484 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/jhchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-05-13 16:40:23.313  INFO 13484 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-13 16:40:23.314  INFO 13484 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3508 ms
+2018-05-13 16:40:23.514  INFO 13484 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-13 16:40:23.521  INFO 13484 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-13 16:40:23.521  INFO 13484 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-13 16:40:23.521  INFO 13484 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-13 16:40:23.522  INFO 13484 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-13 16:40:23.800  INFO 13484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-13 16:40:24.147  INFO 13484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-13 16:40:24.215  INFO 13484 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-13 16:40:24.252  INFO 13484 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-13 16:40:24.438  INFO 13484 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-13 16:40:24.440  INFO 13484 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-13 16:40:24.509  INFO 13484 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-13 16:40:24.759  INFO 13484 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-13 16:40:25.212  INFO 13484 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 16:40:25.531  WARN 13484 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookRestController': Unsatisfied dependency expressed through field 'bookService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookService': Unsatisfied dependency expressed through field 'bookResitory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookResitory': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.example.basic.domain.Book
+2018-05-13 16:40:25.532  INFO 13484 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 16:40:25.534  INFO 13484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-13 16:40:25.544  INFO 13484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-13 16:40:25.550  INFO 13484 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-05-13 16:40:25.579  INFO 13484 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-05-13 16:40:25.595 ERROR 13484 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookRestController': Unsatisfied dependency expressed through field 'bookService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookService': Unsatisfied dependency expressed through field 'bookResitory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookResitory': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.example.basic.domain.Book
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at com.example.basic.SpringBootBasicApplication.main(SpringBootBasicApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_172]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_172]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_172]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_172]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookService': Unsatisfied dependency expressed through field 'bookResitory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookResitory': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.example.basic.domain.Book
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookResitory': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.example.basic.domain.Book
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1702) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 37 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.example.basic.domain.Book
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:472) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:73) ~[spring-data-jpa-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:181) ~[spring-data-jpa-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:119) ~[spring-data-jpa-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:102) ~[spring-data-jpa-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:298) ~[spring-data-commons-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$3(RepositoryFactoryBeanSupport.java:287) ~[spring-data-commons-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:141) ~[spring-data-commons-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.util.Lazy.get(Lazy.java:63) ~[spring-data-commons-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:290) ~[spring-data-commons-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:102) ~[spring-data-jpa-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 47 common frames omitted
+
+2018-05-13 16:41:37.952  INFO 13494 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Starting SpringBootBasicApplication on chenjianhongde-MacBook-Air.local with PID 13494 (/Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic/target/classes started by jhchen in /Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic)
+2018-05-13 16:41:37.954  INFO 13494 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : The following profiles are active: dev
+2018-05-13 16:41:38.094  INFO 13494 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4731d071: startup date [Sun May 13 16:41:38 CST 2018]; root of context hierarchy
+2018-05-13 16:41:40.626  INFO 13494 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ad63d451] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-13 16:41:41.195  INFO 13494 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-05-13 16:41:41.235  INFO 13494 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-13 16:41:41.235  INFO 13494 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-13 16:41:41.250  INFO 13494 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/jhchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-05-13 16:41:41.547  INFO 13494 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-13 16:41:41.548  INFO 13494 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3454 ms
+2018-05-13 16:41:41.770  INFO 13494 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-13 16:41:41.777  INFO 13494 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-13 16:41:41.777  INFO 13494 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-13 16:41:41.778  INFO 13494 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-13 16:41:41.779  INFO 13494 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-13 16:41:42.090  INFO 13494 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-13 16:41:42.474  INFO 13494 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-13 16:41:42.541  INFO 13494 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-13 16:41:42.575  INFO 13494 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-13 16:41:42.737  INFO 13494 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-13 16:41:42.739  INFO 13494 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-13 16:41:42.814  INFO 13494 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-13 16:41:42.993  INFO 13494 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-13 16:41:43.834  INFO 13494 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 16:41:44.507  INFO 13494 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-05-13 16:41:44.949  INFO 13494 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 16:41:45.391  INFO 13494 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4731d071: startup date [Sun May 13 16:41:38 CST 2018]; root of context hierarchy
+2018-05-13 16:41:45.496  WARN 13494 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-13 16:41:45.713  INFO 13494 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[GET]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.getAll()
+2018-05-13 16:41:45.715  INFO 13494 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[POST]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.addOne(com.example.basic.domain.Book)
+2018-05-13 16:41:45.715  INFO 13494 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[GET]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.getOne(long)
+2018-05-13 16:41:45.716  INFO 13494 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[PUT]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.modifyBook(long,java.lang.String,java.lang.String,java.lang.String,int)
+2018-05-13 16:41:45.717  INFO 13494 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[DELETE]}" onto public void com.example.basic.controller.BookRestController.deleteBook(long)
+2018-05-13 16:41:45.718  INFO 13494 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/say],methods=[GET]}" onto public java.lang.String com.example.basic.controller.HelloController.hello()
+2018-05-13 16:41:45.727  INFO 13494 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-13 16:41:45.733  INFO 13494 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-13 16:41:45.827  INFO 13494 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 16:41:45.828  INFO 13494 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 16:41:46.550  INFO 13494 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-05-13 16:41:46.608  INFO 13494 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-13 16:41:46.615  INFO 13494 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-13 16:41:46.625  INFO 13494 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-13 16:41:46.735  INFO 13494 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-13 16:41:46.742  INFO 13494 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Started SpringBootBasicApplication in 9.606 seconds (JVM running for 10.553)
+2018-05-13 16:43:09.896  INFO 13494 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-13 16:43:09.897  INFO 13494 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-13 16:43:09.939  INFO 13494 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms
+2018-05-13 17:11:27.038  INFO 13494 --- [Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4731d071: startup date [Sun May 13 16:41:38 CST 2018]; root of context hierarchy
+2018-05-13 17:11:27.043  INFO 13494 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-13 17:11:27.044  INFO 13494 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-13 17:11:27.048  INFO 13494 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 17:11:27.050  INFO 13494 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-13 17:11:27.058  INFO 13494 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-13 17:20:33.976  INFO 13801 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Starting SpringBootBasicApplication on chenjianhongde-MacBook-Air.local with PID 13801 (/Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic/target/classes started by jhchen in /Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic)
+2018-05-13 17:20:33.978  INFO 13801 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : The following profiles are active: dev
+2018-05-13 17:20:34.064  INFO 13801 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fc954fd: startup date [Sun May 13 17:20:34 CST 2018]; root of context hierarchy
+2018-05-13 17:20:36.369  INFO 13801 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8f22e9ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-13 17:20:36.948  INFO 13801 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-05-13 17:20:36.998  INFO 13801 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-13 17:20:36.998  INFO 13801 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-13 17:20:37.019  INFO 13801 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/jhchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-05-13 17:20:37.308  INFO 13801 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-13 17:20:37.309  INFO 13801 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3246 ms
+2018-05-13 17:20:37.531  INFO 13801 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-13 17:20:37.536  INFO 13801 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-13 17:20:37.537  INFO 13801 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-13 17:20:37.537  INFO 13801 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-13 17:20:37.537  INFO 13801 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-13 17:20:37.800  INFO 13801 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-13 17:20:38.250  INFO 13801 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-13 17:20:38.323  INFO 13801 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-13 17:20:38.346  INFO 13801 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-13 17:20:38.519  INFO 13801 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-13 17:20:38.523  INFO 13801 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-13 17:20:38.583  INFO 13801 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-13 17:20:38.760  INFO 13801 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-13 17:20:39.454  INFO 13801 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 17:20:40.095  INFO 13801 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-05-13 17:20:40.555  INFO 13801 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 17:20:40.973  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fc954fd: startup date [Sun May 13 17:20:34 CST 2018]; root of context hierarchy
+2018-05-13 17:20:41.059  WARN 13801 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-13 17:20:41.188  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[GET]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.getAll()
+2018-05-13 17:20:41.190  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[GET]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.getOne(long)
+2018-05-13 17:20:41.191  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[POST]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.addOne(com.example.basic.domain.Book)
+2018-05-13 17:20:41.192  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[PUT]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.modifyBook(long,java.lang.String,java.lang.String,java.lang.String,int)
+2018-05-13 17:20:41.194  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[DELETE]}" onto public void com.example.basic.controller.BookRestController.deleteBook(long)
+2018-05-13 17:20:41.195  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthor],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthor(java.lang.String)
+2018-05-13 17:20:41.196  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthorAndStatus],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthorAndStatus(java.lang.String,int)
+2018-05-13 17:20:41.197  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byDescription],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByDescription(java.lang.String)
+2018-05-13 17:20:41.198  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byJPQL],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByJPQL(int)
+2018-05-13 17:20:41.199  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byNativeQuery],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByNativeQuery(int)
+2018-05-13 17:20:41.199  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/updateByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.updateByJPQL(int,long)
+2018-05-13 17:20:41.200  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteByJPQL(long)
+2018-05-13 17:20:41.201  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteAndUpdate],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteAndUpdate(long,int,long)
+2018-05-13 17:20:41.204  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/say],methods=[GET]}" onto public java.lang.String com.example.basic.controller.HelloController.hello()
+2018-05-13 17:20:41.209  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-13 17:20:41.210  INFO 13801 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-13 17:20:41.260  INFO 13801 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 17:20:41.261  INFO 13801 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 17:20:41.766  INFO 13801 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-05-13 17:20:41.818  INFO 13801 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-13 17:20:41.821  INFO 13801 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-13 17:20:41.834  INFO 13801 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-13 17:20:41.912  INFO 13801 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-13 17:20:41.923  INFO 13801 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Started SpringBootBasicApplication in 9.002 seconds (JVM running for 9.71)
+2018-05-13 17:21:51.506  INFO 13801 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-13 17:21:51.507  INFO 13801 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-13 17:21:51.564  INFO 13801 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 57 ms
+2018-05-13 17:40:43.599  INFO 13801 --- [Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fc954fd: startup date [Sun May 13 17:20:34 CST 2018]; root of context hierarchy
+2018-05-13 17:40:43.604  INFO 13801 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-13 17:40:43.605  INFO 13801 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-13 17:40:43.607  INFO 13801 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 17:40:43.609  INFO 13801 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-13 17:40:43.619  INFO 13801 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-13 17:41:01.653  INFO 13947 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Starting SpringBootBasicApplication on chenjianhongde-MacBook-Air.local with PID 13947 (/Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic/target/classes started by jhchen in /Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic)
+2018-05-13 17:41:01.655  INFO 13947 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : The following profiles are active: dev
+2018-05-13 17:41:01.748  INFO 13947 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7b5ac32f: startup date [Sun May 13 17:41:01 CST 2018]; root of context hierarchy
+2018-05-13 17:41:03.992  INFO 13947 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dbef1502] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-13 17:41:04.603  INFO 13947 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-05-13 17:41:04.653  INFO 13947 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-13 17:41:04.654  INFO 13947 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-13 17:41:04.672  INFO 13947 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/jhchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-05-13 17:41:04.814  INFO 13947 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-13 17:41:04.815  INFO 13947 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3067 ms
+2018-05-13 17:41:05.163  INFO 13947 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-13 17:41:05.170  INFO 13947 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-13 17:41:05.171  INFO 13947 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-13 17:41:05.172  INFO 13947 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-13 17:41:05.172  INFO 13947 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-13 17:41:05.440  INFO 13947 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-13 17:41:05.832  INFO 13947 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-13 17:41:05.898  INFO 13947 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-13 17:41:05.925  INFO 13947 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-13 17:41:06.077  INFO 13947 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-13 17:41:06.079  INFO 13947 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-13 17:41:06.125  INFO 13947 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-13 17:41:06.274  INFO 13947 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-13 17:41:06.915  INFO 13947 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 17:41:07.542  INFO 13947 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-05-13 17:41:07.990  INFO 13947 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 17:41:08.491  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7b5ac32f: startup date [Sun May 13 17:41:01 CST 2018]; root of context hierarchy
+2018-05-13 17:41:08.559  WARN 13947 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-13 17:41:08.632  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.delete(long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-05-13 17:41:08.634  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[POST]}" onto public java.lang.String com.example.basic.controller.BookPageController.post(com.example.basic.domain.Book,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-05-13 17:41:08.635  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.books()
+2018-05-13 17:41:08.636  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/modify/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.modifyEditPage(long,org.springframework.ui.Model)
+2018-05-13 17:41:08.636  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.detail(long,org.springframework.ui.Model)
+2018-05-13 17:41:08.647  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[GET]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.getAll()
+2018-05-13 17:41:08.648  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[PUT]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.modifyBook(long,java.lang.String,java.lang.String,java.lang.String,int)
+2018-05-13 17:41:08.650  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[DELETE]}" onto public void com.example.basic.controller.BookRestController.deleteBook(long)
+2018-05-13 17:41:08.651  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthor],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthor(java.lang.String)
+2018-05-13 17:41:08.653  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthorAndStatus],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthorAndStatus(java.lang.String,int)
+2018-05-13 17:41:08.654  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byDescription],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByDescription(java.lang.String)
+2018-05-13 17:41:08.655  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byJPQL],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByJPQL(int)
+2018-05-13 17:41:08.656  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byNativeQuery],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByNativeQuery(int)
+2018-05-13 17:41:08.657  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/updateByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.updateByJPQL(int,long)
+2018-05-13 17:41:08.659  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteByJPQL(long)
+2018-05-13 17:41:08.661  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteAndUpdate],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteAndUpdate(long,int,long)
+2018-05-13 17:41:08.662  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[POST]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.addOne(com.example.basic.domain.Book)
+2018-05-13 17:41:08.663  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[GET]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.getOne(long)
+2018-05-13 17:41:08.665  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/say],methods=[GET]}" onto public java.lang.String com.example.basic.controller.HelloController.hello()
+2018-05-13 17:41:08.672  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-13 17:41:08.674  INFO 13947 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-13 17:41:08.732  INFO 13947 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 17:41:08.734  INFO 13947 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 17:41:09.247  INFO 13947 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-05-13 17:41:09.294  INFO 13947 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-13 17:41:09.296  INFO 13947 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-13 17:41:09.305  INFO 13947 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-13 17:41:09.370  INFO 13947 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-13 17:41:09.386  INFO 13947 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Started SpringBootBasicApplication in 8.539 seconds (JVM running for 9.325)
+2018-05-13 17:41:32.762  INFO 13947 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-13 17:41:32.763  INFO 13947 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-13 17:41:32.792  INFO 13947 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2018-05-13 17:41:33.972 ERROR 13947 --- [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-1] Exception processing template "books": An error happened during template parsing (template: "class path resource [templates/books.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/books.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354) [thymeleaf-spring5-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187) [thymeleaf-spring5-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325) [spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069) [spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008) [spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) [spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) [spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866) [spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) [spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) [spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_172]
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "page.content" (template: "books" - line 42, col 17)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	... 52 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "page.content" (template: "books" - line 42, col 17)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290) ~[thymeleaf-spring5-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:165) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.processor.StandardEachTagProcessor.doProcess(StandardEachTagProcessor.java:73) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	... 54 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'content' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:407) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:334) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	... 74 common frames omitted
+
+2018-05-13 17:41:33.981 ERROR 13947 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/books.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'content' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:407) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:334) ~[spring-expression-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:165) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.processor.StandardEachTagProcessor.doProcess(StandardEachTagProcessor.java:73) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354) ~[thymeleaf-spring5-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187) ~[thymeleaf-spring5-3.0.9.RELEASE.jar:3.0.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_172]
+
+2018-05-13 17:42:09.821  INFO 13947 --- [Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7b5ac32f: startup date [Sun May 13 17:41:01 CST 2018]; root of context hierarchy
+2018-05-13 17:42:09.826  INFO 13947 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-13 17:42:09.827  INFO 13947 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-13 17:42:09.829  INFO 13947 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 17:42:09.831  INFO 13947 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-13 17:42:09.840  INFO 13947 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-13 17:47:12.975  INFO 13989 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Starting SpringBootBasicApplication on chenjianhongde-MacBook-Air.local with PID 13989 (/Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic/target/classes started by jhchen in /Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic)
+2018-05-13 17:47:12.976  INFO 13989 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : The following profiles are active: dev
+2018-05-13 17:47:13.144  INFO 13989 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3b26d7cd: startup date [Sun May 13 17:47:13 CST 2018]; root of context hierarchy
+2018-05-13 17:47:15.433  INFO 13989 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9722cfb0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-13 17:47:16.052  INFO 13989 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-05-13 17:47:16.101  INFO 13989 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-13 17:47:16.103  INFO 13989 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-13 17:47:16.123  INFO 13989 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/jhchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-05-13 17:47:16.400  INFO 13989 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-13 17:47:16.401  INFO 13989 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3257 ms
+2018-05-13 17:47:16.614  INFO 13989 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-13 17:47:16.622  INFO 13989 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-13 17:47:16.623  INFO 13989 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-13 17:47:16.623  INFO 13989 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-13 17:47:16.623  INFO 13989 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-13 17:47:16.890  INFO 13989 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-13 17:47:17.236  INFO 13989 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-13 17:47:17.299  INFO 13989 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-13 17:47:17.325  INFO 13989 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-13 17:47:17.487  INFO 13989 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-13 17:47:17.490  INFO 13989 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-13 17:47:17.566  INFO 13989 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-13 17:47:17.803  INFO 13989 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-13 17:47:18.682  INFO 13989 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 17:47:19.252  INFO 13989 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-05-13 17:47:19.641  INFO 13989 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 17:47:20.045  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3b26d7cd: startup date [Sun May 13 17:47:13 CST 2018]; root of context hierarchy
+2018-05-13 17:47:20.119  WARN 13989 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-13 17:47:20.187  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.delete(long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-05-13 17:47:20.189  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[POST]}" onto public java.lang.String com.example.basic.controller.BookPageController.post(com.example.basic.domain.Book,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-05-13 17:47:20.190  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.detail(long,org.springframework.ui.Model)
+2018-05-13 17:47:20.191  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.books(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2018-05-13 17:47:20.193  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/modify/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.modifyEditPage(long,org.springframework.ui.Model)
+2018-05-13 17:47:20.206  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[GET]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.getAll()
+2018-05-13 17:47:20.207  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[POST]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.addOne(com.example.basic.domain.Book)
+2018-05-13 17:47:20.207  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[GET]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.getOne(long)
+2018-05-13 17:47:20.208  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[PUT]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.modifyBook(long,java.lang.String,java.lang.String,java.lang.String,int)
+2018-05-13 17:47:20.209  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[DELETE]}" onto public void com.example.basic.controller.BookRestController.deleteBook(long)
+2018-05-13 17:47:20.209  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthor],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthor(java.lang.String)
+2018-05-13 17:47:20.210  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthorAndStatus],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthorAndStatus(java.lang.String,int)
+2018-05-13 17:47:20.210  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byDescription],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByDescription(java.lang.String)
+2018-05-13 17:47:20.211  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byJPQL],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByJPQL(int)
+2018-05-13 17:47:20.212  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byNativeQuery],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByNativeQuery(int)
+2018-05-13 17:47:20.212  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/updateByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.updateByJPQL(int,long)
+2018-05-13 17:47:20.213  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteByJPQL(long)
+2018-05-13 17:47:20.213  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteAndUpdate],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteAndUpdate(long,int,long)
+2018-05-13 17:47:20.214  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/say],methods=[GET]}" onto public java.lang.String com.example.basic.controller.HelloController.hello()
+2018-05-13 17:47:20.218  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-13 17:47:20.220  INFO 13989 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-13 17:47:20.282  INFO 13989 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 17:47:20.282  INFO 13989 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 17:47:20.816  INFO 13989 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-05-13 17:47:20.865  INFO 13989 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-13 17:47:20.867  INFO 13989 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-13 17:47:20.880  INFO 13989 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-13 17:47:20.978  INFO 13989 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-13 17:47:20.983  INFO 13989 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Started SpringBootBasicApplication in 8.911 seconds (JVM running for 9.638)
+2018-05-13 17:47:45.492  INFO 13989 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-13 17:47:45.493  INFO 13989 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-13 17:47:45.527  INFO 13989 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2018-05-13 17:48:26.802  WARN 13989 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "modify"
+2018-05-13 17:48:26.806  WARN 13989 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved exception caused by Handler execution: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "modify"
+2018-05-13 17:52:18.734  INFO 13989 --- [Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3b26d7cd: startup date [Sun May 13 17:47:13 CST 2018]; root of context hierarchy
+2018-05-13 17:52:18.738  INFO 13989 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-13 17:52:18.739  INFO 13989 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-13 17:52:18.742  INFO 13989 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 17:52:18.744  INFO 13989 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-13 17:52:18.753  INFO 13989 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-13 17:52:40.934  INFO 14026 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Starting SpringBootBasicApplication on chenjianhongde-MacBook-Air.local with PID 14026 (/Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic/target/classes started by jhchen in /Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic)
+2018-05-13 17:52:40.935  INFO 14026 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : The following profiles are active: dev
+2018-05-13 17:52:41.052  INFO 14026 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4731d071: startup date [Sun May 13 17:52:41 CST 2018]; root of context hierarchy
+2018-05-13 17:52:43.290  INFO 14026 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$be13d618] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-13 17:52:43.894  INFO 14026 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-05-13 17:52:43.946  INFO 14026 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-13 17:52:43.947  INFO 14026 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-13 17:52:43.964  INFO 14026 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/jhchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-05-13 17:52:44.233  INFO 14026 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-13 17:52:44.234  INFO 14026 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3182 ms
+2018-05-13 17:52:44.479  INFO 14026 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-13 17:52:44.486  INFO 14026 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-13 17:52:44.487  INFO 14026 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-13 17:52:44.487  INFO 14026 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-13 17:52:44.488  INFO 14026 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-13 17:52:44.755  INFO 14026 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-13 17:52:45.095  INFO 14026 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-13 17:52:45.150  INFO 14026 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-13 17:52:45.177  INFO 14026 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-13 17:52:45.325  INFO 14026 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-13 17:52:45.328  INFO 14026 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-13 17:52:45.403  INFO 14026 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-13 17:52:45.583  INFO 14026 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-13 17:52:46.228  INFO 14026 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 17:52:46.725  INFO 14026 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-05-13 17:52:47.080  INFO 14026 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 17:52:47.454  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4731d071: startup date [Sun May 13 17:52:41 CST 2018]; root of context hierarchy
+2018-05-13 17:52:47.525  WARN 14026 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-13 17:52:47.632  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.delete(long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-05-13 17:52:47.634  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.detail(long,org.springframework.ui.Model)
+2018-05-13 17:52:47.635  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.books(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2018-05-13 17:52:47.636  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/modify],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.modifyPage(org.springframework.ui.Model)
+2018-05-13 17:52:47.637  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/modify/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.modifyEditPage(long,org.springframework.ui.Model)
+2018-05-13 17:52:47.637  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[POST]}" onto public java.lang.String com.example.basic.controller.BookPageController.post(com.example.basic.domain.Book,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-05-13 17:52:47.652  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[GET]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.getAll()
+2018-05-13 17:52:47.653  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[POST]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.addOne(com.example.basic.domain.Book)
+2018-05-13 17:52:47.655  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[PUT]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.modifyBook(long,java.lang.String,java.lang.String,java.lang.String,int)
+2018-05-13 17:52:47.658  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[DELETE]}" onto public void com.example.basic.controller.BookRestController.deleteBook(long)
+2018-05-13 17:52:47.659  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthor],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthor(java.lang.String)
+2018-05-13 17:52:47.660  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthorAndStatus],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthorAndStatus(java.lang.String,int)
+2018-05-13 17:52:47.661  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byDescription],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByDescription(java.lang.String)
+2018-05-13 17:52:47.661  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byJPQL],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByJPQL(int)
+2018-05-13 17:52:47.662  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byNativeQuery],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByNativeQuery(int)
+2018-05-13 17:52:47.662  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/updateByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.updateByJPQL(int,long)
+2018-05-13 17:52:47.663  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteByJPQL(long)
+2018-05-13 17:52:47.663  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteAndUpdate],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteAndUpdate(long,int,long)
+2018-05-13 17:52:47.664  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[GET]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.getOne(long)
+2018-05-13 17:52:47.665  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/say],methods=[GET]}" onto public java.lang.String com.example.basic.controller.HelloController.hello()
+2018-05-13 17:52:47.668  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-13 17:52:47.670  INFO 14026 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-13 17:52:47.720  INFO 14026 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 17:52:47.721  INFO 14026 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 17:52:48.235  INFO 14026 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-05-13 17:52:48.285  INFO 14026 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-13 17:52:48.287  INFO 14026 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-13 17:52:48.300  INFO 14026 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-13 17:52:48.381  INFO 14026 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-13 17:52:48.388  INFO 14026 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Started SpringBootBasicApplication in 8.321 seconds (JVM running for 9.007)
+2018-05-13 17:52:56.173  INFO 14026 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-13 17:52:56.173  INFO 14026 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-13 17:52:56.201  INFO 14026 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2018-05-13 17:59:02.186  INFO 14026 --- [Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4731d071: startup date [Sun May 13 17:52:41 CST 2018]; root of context hierarchy
+2018-05-13 17:59:02.191  INFO 14026 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-13 17:59:02.193  INFO 14026 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-13 17:59:02.195  INFO 14026 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 17:59:02.198  INFO 14026 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-13 17:59:02.211  INFO 14026 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-13 18:17:56.170  INFO 14213 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Starting SpringBootBasicApplication on chenjianhongde-MacBook-Air.local with PID 14213 (/Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic/target/classes started by jhchen in /Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic)
+2018-05-13 18:17:56.172  INFO 14213 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : The following profiles are active: dev
+2018-05-13 18:17:56.308  INFO 14213 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fc954fd: startup date [Sun May 13 18:17:56 CST 2018]; root of context hierarchy
+2018-05-13 18:17:58.672  INFO 14213 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e7ba8848] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-13 18:17:59.354  INFO 14213 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-05-13 18:17:59.399  INFO 14213 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-13 18:17:59.399  INFO 14213 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-13 18:17:59.417  INFO 14213 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/jhchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-05-13 18:17:59.708  INFO 14213 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-13 18:17:59.709  INFO 14213 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3401 ms
+2018-05-13 18:17:59.934  INFO 14213 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-13 18:17:59.941  INFO 14213 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-13 18:17:59.942  INFO 14213 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-13 18:17:59.942  INFO 14213 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-13 18:17:59.943  INFO 14213 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-13 18:18:00.222  INFO 14213 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-13 18:18:00.589  INFO 14213 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-13 18:18:00.645  INFO 14213 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-13 18:18:00.677  INFO 14213 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-13 18:18:00.821  INFO 14213 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-13 18:18:00.823  INFO 14213 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-13 18:18:00.884  INFO 14213 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-13 18:18:01.071  INFO 14213 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-13 18:18:01.779  INFO 14213 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 18:18:02.353  INFO 14213 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-05-13 18:18:02.735  INFO 14213 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 18:18:03.152  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fc954fd: startup date [Sun May 13 18:17:56 CST 2018]; root of context hierarchy
+2018-05-13 18:18:03.230  WARN 14213 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-13 18:18:03.317  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.delete(long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-05-13 18:18:03.318  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.detail(long,org.springframework.ui.Model)
+2018-05-13 18:18:03.319  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[POST]}" onto public java.lang.String com.example.basic.controller.BookPageController.post(com.example.basic.domain.Book,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-05-13 18:18:03.319  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.books(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2018-05-13 18:18:03.320  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/modify],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.modifyPage(org.springframework.ui.Model)
+2018-05-13 18:18:03.320  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/modify/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.modifyEditPage(long,org.springframework.ui.Model)
+2018-05-13 18:18:03.331  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[GET]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.getAll()
+2018-05-13 18:18:03.331  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[POST]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.addOne(com.example.basic.domain.Book)
+2018-05-13 18:18:03.332  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[GET]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.getOne(long)
+2018-05-13 18:18:03.333  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[PUT]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.modifyBook(long,java.lang.String,java.lang.String,java.lang.String,int)
+2018-05-13 18:18:03.333  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[DELETE]}" onto public void com.example.basic.controller.BookRestController.deleteBook(long)
+2018-05-13 18:18:03.334  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthor],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthor(java.lang.String)
+2018-05-13 18:18:03.334  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthorAndStatus],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthorAndStatus(java.lang.String,int)
+2018-05-13 18:18:03.335  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byDescription],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByDescription(java.lang.String)
+2018-05-13 18:18:03.336  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byJPQL],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByJPQL(int)
+2018-05-13 18:18:03.337  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byNativeQuery],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByNativeQuery(int)
+2018-05-13 18:18:03.338  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/updateByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.updateByJPQL(int,long)
+2018-05-13 18:18:03.338  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteByJPQL(long)
+2018-05-13 18:18:03.338  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteAndUpdate],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteAndUpdate(long,int,long)
+2018-05-13 18:18:03.339  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/say],methods=[GET]}" onto public java.lang.String com.example.basic.controller.HelloController.hello()
+2018-05-13 18:18:03.344  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-13 18:18:03.347  INFO 14213 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-13 18:18:03.423  INFO 14213 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 18:18:03.424  INFO 14213 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 18:18:04.031  INFO 14213 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-05-13 18:18:04.092  INFO 14213 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-13 18:18:04.095  INFO 14213 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-13 18:18:04.106  INFO 14213 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-13 18:18:04.188  INFO 14213 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-13 18:18:04.196  INFO 14213 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Started SpringBootBasicApplication in 9.036 seconds (JVM running for 9.808)
+2018-05-13 18:18:15.435  INFO 14213 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-13 18:18:15.435  INFO 14213 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-13 18:18:15.467  INFO 14213 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2018-05-13 18:29:48.307  INFO 14213 --- [Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fc954fd: startup date [Sun May 13 18:17:56 CST 2018]; root of context hierarchy
+2018-05-13 18:29:48.311  INFO 14213 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-13 18:29:48.314  INFO 14213 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-13 18:29:48.317  INFO 14213 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 18:29:48.319  INFO 14213 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-13 18:29:48.330  INFO 14213 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-13 18:30:29.166  INFO 14300 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Starting SpringBootBasicApplication on chenjianhongde-MacBook-Air.local with PID 14300 (/Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic/target/classes started by jhchen in /Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic)
+2018-05-13 18:30:29.167  INFO 14300 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : The following profiles are active: dev
+2018-05-13 18:30:29.312  INFO 14300 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@376f0034: startup date [Sun May 13 18:30:29 CST 2018]; root of context hierarchy
+2018-05-13 18:30:31.457  INFO 14300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ce953634] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-13 18:30:32.087  INFO 14300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-05-13 18:30:32.134  INFO 14300 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-13 18:30:32.134  INFO 14300 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-13 18:30:32.147  INFO 14300 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/jhchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-05-13 18:30:32.408  INFO 14300 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-13 18:30:32.409  INFO 14300 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3097 ms
+2018-05-13 18:30:32.621  INFO 14300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-13 18:30:32.626  INFO 14300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-13 18:30:32.627  INFO 14300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-13 18:30:32.628  INFO 14300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-13 18:30:32.628  INFO 14300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-13 18:30:32.917  INFO 14300 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-13 18:30:33.272  INFO 14300 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-13 18:30:33.331  INFO 14300 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-13 18:30:33.358  INFO 14300 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-13 18:30:33.519  INFO 14300 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-13 18:30:33.521  INFO 14300 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-13 18:30:33.592  INFO 14300 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-13 18:30:33.827  INFO 14300 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-13 18:30:34.584  INFO 14300 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 18:30:35.178  INFO 14300 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-05-13 18:30:35.537  INFO 14300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 18:30:35.928  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@376f0034: startup date [Sun May 13 18:30:29 CST 2018]; root of context hierarchy
+2018-05-13 18:30:36.007  WARN 14300 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-13 18:30:36.091  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.delete(long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-05-13 18:30:36.092  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.detail(long,org.springframework.ui.Model)
+2018-05-13 18:30:36.093  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[POST]}" onto public java.lang.String com.example.basic.controller.BookPageController.post(com.example.basic.domain.Book,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-05-13 18:30:36.093  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.books(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2018-05-13 18:30:36.094  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/modify],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.modifyPage(org.springframework.ui.Model)
+2018-05-13 18:30:36.094  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/modify/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.modifyEditPage(long,org.springframework.ui.Model)
+2018-05-13 18:30:36.105  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[GET]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.getAll()
+2018-05-13 18:30:36.106  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[POST]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.addOne(com.example.basic.domain.Book)
+2018-05-13 18:30:36.106  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[GET]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.getOne(long)
+2018-05-13 18:30:36.107  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[PUT]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.modifyBook(long,java.lang.String,java.lang.String,java.lang.String,int)
+2018-05-13 18:30:36.108  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[DELETE]}" onto public void com.example.basic.controller.BookRestController.deleteBook(long)
+2018-05-13 18:30:36.109  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthor],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthor(java.lang.String)
+2018-05-13 18:30:36.109  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthorAndStatus],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthorAndStatus(java.lang.String,int)
+2018-05-13 18:30:36.110  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byDescription],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByDescription(java.lang.String)
+2018-05-13 18:30:36.111  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byJPQL],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByJPQL(int)
+2018-05-13 18:30:36.112  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byNativeQuery],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByNativeQuery(int)
+2018-05-13 18:30:36.112  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/updateByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.updateByJPQL(int,long)
+2018-05-13 18:30:36.113  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteByJPQL(long)
+2018-05-13 18:30:36.113  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteAndUpdate],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteAndUpdate(long,int,long)
+2018-05-13 18:30:36.114  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/say],methods=[GET]}" onto public java.lang.String com.example.basic.controller.HelloController.hello()
+2018-05-13 18:30:36.118  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-13 18:30:36.119  INFO 14300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-13 18:30:36.173  INFO 14300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 18:30:36.173  INFO 14300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 18:30:36.709  INFO 14300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-05-13 18:30:36.762  INFO 14300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-13 18:30:36.768  INFO 14300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-13 18:30:36.778  INFO 14300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-13 18:30:36.857  INFO 14300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-13 18:30:36.866  INFO 14300 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Started SpringBootBasicApplication in 8.631 seconds (JVM running for 9.366)
+2018-05-13 18:30:43.243  INFO 14300 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-13 18:30:43.244  INFO 14300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-13 18:30:43.272  INFO 14300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2018-05-13 18:31:25.920  INFO 14300 --- [Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@376f0034: startup date [Sun May 13 18:30:29 CST 2018]; root of context hierarchy
+2018-05-13 18:31:25.928  INFO 14300 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-13 18:31:25.929  INFO 14300 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-13 18:31:25.931  INFO 14300 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 18:31:25.934  INFO 14300 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-13 18:31:25.943  INFO 14300 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-13 18:37:26.507  INFO 14350 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Starting SpringBootBasicApplication on chenjianhongde-MacBook-Air.local with PID 14350 (/Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic/target/classes started by jhchen in /Users/jhchen/workspace-sts-3.9.3.RELEASE/springBoot/spring-boot-basic)
+2018-05-13 18:37:26.509  INFO 14350 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : The following profiles are active: dev
+2018-05-13 18:37:26.677  INFO 14350 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@69013f41: startup date [Sun May 13 18:37:26 CST 2018]; root of context hierarchy
+2018-05-13 18:37:29.436  INFO 14350 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8709d488] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-13 18:37:30.527  INFO 14350 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-05-13 18:37:30.583  INFO 14350 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-13 18:37:30.584  INFO 14350 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-13 18:37:30.626  INFO 14350 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/jhchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-05-13 18:37:30.959  INFO 14350 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-13 18:37:30.960  INFO 14350 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4282 ms
+2018-05-13 18:37:31.214  INFO 14350 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-13 18:37:31.223  INFO 14350 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-13 18:37:31.225  INFO 14350 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-13 18:37:31.225  INFO 14350 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-13 18:37:31.225  INFO 14350 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-13 18:37:31.518  INFO 14350 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-13 18:37:31.942  INFO 14350 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-13 18:37:32.011  INFO 14350 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-13 18:37:32.043  INFO 14350 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-13 18:37:32.217  INFO 14350 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-13 18:37:32.221  INFO 14350 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-13 18:37:32.295  INFO 14350 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-13 18:37:32.512  INFO 14350 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-13 18:37:33.572  INFO 14350 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 18:37:34.293  INFO 14350 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-05-13 18:37:34.787  INFO 14350 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 18:37:35.314  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@69013f41: startup date [Sun May 13 18:37:26 CST 2018]; root of context hierarchy
+2018-05-13 18:37:35.395  WARN 14350 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-13 18:37:35.494  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.delete(long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-05-13 18:37:35.496  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[POST]}" onto public java.lang.String com.example.basic.controller.BookPageController.post(com.example.basic.domain.Book,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-05-13 18:37:35.497  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.detail(long,org.springframework.ui.Model)
+2018-05-13 18:37:35.497  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.books(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2018-05-13 18:37:35.498  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/modify],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.modifyPage(org.springframework.ui.Model)
+2018-05-13 18:37:35.498  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/modify/{id}],methods=[GET]}" onto public java.lang.String com.example.basic.controller.BookPageController.modifyEditPage(long,org.springframework.ui.Model)
+2018-05-13 18:37:35.509  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[GET]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.getAll()
+2018-05-13 18:37:35.511  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[POST]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.addOne(com.example.basic.domain.Book)
+2018-05-13 18:37:35.512  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[GET]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.getOne(long)
+2018-05-13 18:37:35.512  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[PUT]}" onto public com.example.basic.domain.Book com.example.basic.controller.BookRestController.modifyBook(long,java.lang.String,java.lang.String,java.lang.String,int)
+2018-05-13 18:37:35.513  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[DELETE]}" onto public void com.example.basic.controller.BookRestController.deleteBook(long)
+2018-05-13 18:37:35.514  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthor],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthor(java.lang.String)
+2018-05-13 18:37:35.514  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byAuthorAndStatus],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByAuthorAndStatus(java.lang.String,int)
+2018-05-13 18:37:35.515  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byDescription],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByDescription(java.lang.String)
+2018-05-13 18:37:35.515  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byJPQL],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByJPQL(int)
+2018-05-13 18:37:35.516  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/byNativeQuery],methods=[POST]}" onto public java.util.List<com.example.basic.domain.Book> com.example.basic.controller.BookRestController.findByNativeQuery(int)
+2018-05-13 18:37:35.517  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/updateByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.updateByJPQL(int,long)
+2018-05-13 18:37:35.517  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteByJPQL],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteByJPQL(long)
+2018-05-13 18:37:35.518  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/deleteAndUpdate],methods=[POST]}" onto public int com.example.basic.controller.BookRestController.deleteAndUpdate(long,int,long)
+2018-05-13 18:37:35.519  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/say],methods=[GET]}" onto public java.lang.String com.example.basic.controller.HelloController.hello()
+2018-05-13 18:37:35.523  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-13 18:37:35.524  INFO 14350 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-13 18:37:35.583  INFO 14350 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 18:37:35.584  INFO 14350 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-13 18:37:36.165  INFO 14350 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-05-13 18:37:36.247  INFO 14350 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-13 18:37:36.250  INFO 14350 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-13 18:37:36.259  INFO 14350 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-13 18:37:36.328  INFO 14350 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-13 18:37:36.335  INFO 14350 --- [restartedMain] c.e.basic.SpringBootBasicApplication     : Started SpringBootBasicApplication in 10.747 seconds (JVM running for 11.542)
+2018-05-13 18:37:37.180  INFO 14350 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-13 18:37:37.180  INFO 14350 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-13 18:37:37.213  INFO 14350 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2018-05-13 18:41:21.594  INFO 14350 --- [Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@69013f41: startup date [Sun May 13 18:37:26 CST 2018]; root of context hierarchy
+2018-05-13 18:41:21.598  INFO 14350 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-13 18:41:21.599  INFO 14350 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-13 18:41:21.601  INFO 14350 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-13 18:41:21.604  INFO 14350 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-13 18:41:21.615  INFO 14350 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

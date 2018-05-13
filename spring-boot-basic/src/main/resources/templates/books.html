@@ -12,12 +12,12 @@
 
     <div class="container">
         <h2 class="page-header">書單列表</h2>
-        <div class="alert alert-success alert-dismissable fade in" th:unless="${#strings.isEmpty(message)}">
+        <div class="alert alert-success alert-dismissable" th:unless="${#strings.isEmpty(message)}">
             <a href="#" class="close" data-dismiss="alert">&times;</a>
             <strong>恭喜，</strong>
             <span th:text="${message}">信息提交成功</span>
         </div>
-        <p class="text-right"><a href="./input.html" th:href="@{/books/input}" class="btn btn-primary">新增</a></p>
+        <p class="text-right"><a href="./modify.html" th:href="@{/books/modify}" class="btn btn-primary">新增</a></p>
         <table class="table table-bordered table-striped table-hover">
             <thead>
             <tr>
@@ -51,16 +51,16 @@
                     <span th:case="*">狀態</span>
                 </td>
                 <td>
-                    <a href="#" th:href="@{/books/{id}/input(id=${book.id})}" >更新</a>&nbsp;
-                    <a href="#" th:href="@{/books/{id}/delete(id=${book.id})}">删除</a>
+                    <a href="#" th:href="@{/books/modify/{id}(id=${book.id})}" >更新</a>&nbsp;
+                    <a href="#" th:href="@{/books/delete/{id}(id=${book.id})}">删除</a>
                 </td>
             </tr>
             </tbody>
         </table>
-        <nav>
-            <ul class="pager">
-                <li class="previous"><a href="#" th:href="@{'/books?page='+ ${page.number-1}}" th:unless="${page.first}"  >上一页</a></li>
-                <li class="next"><a href="#" th:href="@{/books(page=${page.number} + 1)}" th:unless="${page.last}">下一页</a></li>
+        <nav class="d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#" th:href="@{'/books?page='+ ${page.number-1}}" th:unless="${page.first}"  >上一頁</a></li>
+                <li class="page-item"><a class="page-link" href="#" th:href="@{/books(page=${page.number} + 1)}" th:unless="${page.last}">下一頁</a></li>
             </ul>
         </nav>
     </div>
