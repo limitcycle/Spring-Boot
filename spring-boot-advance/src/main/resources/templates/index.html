@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8" xmlns:th="http://www.w3.org/1999/xhtml">
+	<title>首頁</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" >
+</head>
+<body>
+	<div class="container" style="max-width:600px; margin-top: 50px">
+        <div class="jumbotron">
+            <h1>歡迎</h1>
+            <p th:text="${session.user.username}"></p>
+            <p><a href="#" th:href="@{/books/1}">查看書單詳情</a></p>
+        </div>
+        <a href="#" class="btn btn-warning" th:href="@{/logout}">登  出</a>
+    </div>
+</body>
+</html>
