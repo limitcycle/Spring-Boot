@@ -6,7 +6,7 @@ spring:
     mode: HTML
   devtools:
     restart:
-      trigger-file: .trigger
+      trigger-file: trigger.txt
 
 
 

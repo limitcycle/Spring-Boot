@@ -67,6 +67,7 @@ public class BookPageController {
 	@GetMapping("books/delete/{id}")
 	public String delete(@PathVariable long id, final RedirectAttributes attributes) {
 		bookService.deleteOne(id);
+		// dddddssss
 		attributes.addFlashAttribute("message", "刪除成功");
 		return "redirect:/books";
 	}
