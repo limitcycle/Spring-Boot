@@ -19,7 +19,7 @@ public class BookController {
 	@Autowired
 	private BookService bookService;
 
-	@GetMapping("{/id}")
+	@GetMapping("/{id}")
 	public String getBook(@PathVariable Long id, Model model) {
 		Book book = bookService.getBookById(id);
 		model.addAttribute("book", book);

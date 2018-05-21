@@ -14,6 +14,7 @@ public class Book {
     private String description;
     private String name;
     private Integer status;
+    
 	public Long getId() {
 		return id;
 	}

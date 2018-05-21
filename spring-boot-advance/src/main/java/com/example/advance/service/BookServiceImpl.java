@@ -3,11 +3,13 @@ package com.example.advance.service;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.advance.domain.Book;
 import com.example.advance.exception.BookNotFoundException;
 import com.example.advance.repository.BookRepository;
 
+@Service
 public class BookServiceImpl implements BookService {
 	
 	@Autowired

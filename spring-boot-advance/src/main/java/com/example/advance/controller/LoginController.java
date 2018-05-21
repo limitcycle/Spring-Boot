@@ -32,6 +32,11 @@ public class LoginController {
 		return "login";
 	}
 	
+	@GetMapping("/")
+	public String indexPage() {
+		return "index";
+	}
+	
 	/**
 	 * 跳轉到註冊頁面
 	 * @return
