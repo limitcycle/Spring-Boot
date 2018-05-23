@@ -52,7 +52,7 @@ public class BookController {
 	@GetMapping("/books/{id}")
     public ResponseEntity<?> getBook(@PathVariable Long id) {
         Book book = bookService.getBookById(id);
-        return new ResponseEntity<Object>(book,HttpStatus.OK);
+        return new ResponseEntity<Object>(book, HttpStatus.OK);
     }
 	
 	/**
@@ -82,9 +82,9 @@ public class BookController {
 			BindingResult bindingResult) {
 
 		Book currentBook = bookService.getBookById(id);
-		if (bindingResult.hasErrors()) {
-			throw new InvalidRequestException("Invalid parameter", bindingResult);
-		}
+//		if (bindingResult.hasErrors()) {
+//			throw new InvalidRequestException("Invalid parameter", bindingResult);
+//		}
 		bookDTO.convertToBook(currentBook);
 		Book book1 = bookService.updateBook(currentBook);
 		return new ResponseEntity<Object>(book1, HttpStatus.OK);
