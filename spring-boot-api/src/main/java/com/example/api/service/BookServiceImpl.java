@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.api.domain.Book;
+import com.example.api.dto.BookDTO;
 import com.example.api.exception.NotFoundException;
 import com.example.api.repository.BookRepository;
 
@@ -22,7 +23,7 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public Book getBookById(Long id) {
+	public Book getBookById(long id) {
 		Optional<Book> book = bookRepository.findById(id);
 		return book.orElseThrow(() -> 
 				new NotFoundException(String.format("book by id %s not found", id)));
@@ -34,12 +35,14 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public Book updateBook(Book book) {
-		return bookRepository.save(book);
+	public Book updateBook(long id, BookDTO bookDTO) {
+		Book currentBook = getBookById(id);
+		bookDTO.convertToBook(currentBook);
+		return bookRepository.save(currentBook);
 	}
-
+	
 	@Override
-	public void deleteBookById(Long id) {
+	public void deleteBookById(long id) {
 		bookRepository.deleteById(id);
 	}
 

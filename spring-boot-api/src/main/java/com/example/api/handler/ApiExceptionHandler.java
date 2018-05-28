@@ -28,7 +28,7 @@ public class ApiExceptionHandler {
     @ResponseBody
     public ResponseEntity<?> handleNofFound(RuntimeException e) {
 //        ErrorResource errorResource = new ErrorResource(e.getMessage());
-        ResponseEntity<Object> result = new ResponseEntity<Object>(e.getMessage(), HttpStatus.NOT_FOUND);
+        ResponseEntity<Object> result = new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
 //        logger.warn("Return ------ {}",result );
         return result;
     }
@@ -49,7 +49,7 @@ public class ApiExceptionHandler {
         }
 
         InvalidErrorResource ier = new InvalidErrorResource(e.getMessage(),fieldResources);
-        ResponseEntity<Object> result = new ResponseEntity<Object>(ier, HttpStatus.BAD_REQUEST);
+        ResponseEntity<Object> result = new ResponseEntity<>(ier, HttpStatus.BAD_REQUEST);
 //        logger.warn("Return ------ {}",result );
         return result;
     }
@@ -63,6 +63,6 @@ public class ApiExceptionHandler {
     @ResponseBody
     public ResponseEntity<?> handleException(Exception e) {
 //       logger.error("Error ---- {}", e);
-        return new ResponseEntity<Object>(HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

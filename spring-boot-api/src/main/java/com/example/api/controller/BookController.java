@@ -41,7 +41,7 @@ public class BookController {
         if (CollectionUtils.isEmpty(books)) {
             throw new NotFoundException("Books Not Found");
         }
-        return new ResponseEntity<List<Book>>(books, HttpStatus.OK);
+        return new ResponseEntity<>(books, HttpStatus.OK);
     }
 	
 	/**
@@ -50,9 +50,9 @@ public class BookController {
 	 * @return
 	 */
 	@GetMapping("/books/{id}")
-    public ResponseEntity<?> getBook(@PathVariable Long id) {
+    public ResponseEntity<?> getBook(@PathVariable long id) {
         Book book = bookService.getBookById(id);
-        return new ResponseEntity<Object>(book, HttpStatus.OK);
+        return new ResponseEntity<>(book, HttpStatus.OK);
     }
 	
 	/**
@@ -67,7 +67,7 @@ public class BookController {
             throw new InvalidRequestException("Invalid parameter", bindingResult);
         }
         Book book1 = bookService.saveBook(bookDTO.convertToBook());
-        return new ResponseEntity<Object>(book1, HttpStatus.CREATED);
+        return new ResponseEntity<>(book1, HttpStatus.CREATED);
     }
 	
 	/**
@@ -78,16 +78,12 @@ public class BookController {
 	 * @return
 	 */
 	@PutMapping("/books/{id}")
-	public ResponseEntity<?> updateBook(@PathVariable Long id, @Valid @RequestBody BookDTO bookDTO,
-			BindingResult bindingResult) {
-
-		Book currentBook = bookService.getBookById(id);
+	public ResponseEntity<?> updateBook(@PathVariable long id, @Valid @RequestBody BookDTO bookDTO) {
 //		if (bindingResult.hasErrors()) {
 //			throw new InvalidRequestException("Invalid parameter", bindingResult);
 //		}
-		bookDTO.convertToBook(currentBook);
-		Book book1 = bookService.updateBook(currentBook);
-		return new ResponseEntity<Object>(book1, HttpStatus.OK);
+		Book book = bookService.updateBook(id, bookDTO);
+		return new ResponseEntity<>(book, HttpStatus.OK);
 	}
 	
 	/**
@@ -96,9 +92,9 @@ public class BookController {
 	 * @return
 	 */
 	@DeleteMapping("/books/{id}")
-    public ResponseEntity<?> deleteBook(@PathVariable Long id) {
+    public ResponseEntity<?> deleteBook(@PathVariable long id) {
         bookService.deleteBookById(id);
-        return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 	
 	/**
@@ -108,6 +104,6 @@ public class BookController {
 	@DeleteMapping("/books")
     public ResponseEntity<?> deleteAllBooks() {
         bookService.deleteAllBooks();
-        return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

@@ -9,11 +9,11 @@ public class Book {
 	
 	@Id
     @GeneratedValue
-    private Long id;
+    private long id;
     private String author;
     private String description;
     private String name;
-    private Integer status;
+    private int status;
     
 	public Long getId() {
 		return id;
