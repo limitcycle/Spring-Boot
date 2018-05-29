@@ -74,7 +74,6 @@ public class BookController {
 	 * 更新一個書單
 	 * @param id
 	 * @param bookDTO
-	 * @param bindingResult
 	 * @return
 	 */
 	@PutMapping("/books/{id}")

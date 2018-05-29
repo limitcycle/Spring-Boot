@@ -7,6 +7,7 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -28,6 +29,7 @@ import com.example.api.dto.BookDTO;
 import com.example.api.exception.NotFoundException;
 import com.example.api.service.BookService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(BookController.class)
@@ -142,7 +144,7 @@ public class BookControllerTest {
 		
 		ObjectMapper mapper = new ObjectMapper();
 		String bookAsString = mapper.writeValueAsString(bookDTO);
-		
+
 		// when
 		 when(bookService.updateBook(anyLong(), any(BookDTO.class))).thenReturn(book);
 		
@@ -152,4 +154,19 @@ public class BookControllerTest {
 				.andExpect(status().isOk())
 				.andExpect(jsonPath("$.author", is(book.getAuthor())));
 	}
+
+	@Test
+    public void givenId_whenDeleteBook_thenReturnHttpStatus() throws Exception {
+        // given
+	    long id = 1;
+	    // then
+        this.mockMvc.perform(delete("/api/v1/books/" + id))
+                .andExpect(status().isNoContent());
+    }
+
+    @Test
+    public void deleteAllBooks() throws Exception {
+	    this.mockMvc.perform(delete("/api/v1/books"))
+                .andExpect(status().isNoContent());
+    }
 }
