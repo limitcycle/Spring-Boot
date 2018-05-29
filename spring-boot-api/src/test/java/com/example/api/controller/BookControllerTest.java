@@ -1,6 +1,7 @@
 package com.example.api.controller;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -143,7 +144,7 @@ public class BookControllerTest {
 		String bookAsString = mapper.writeValueAsString(bookDTO);
 		
 		// when
-		when(bookService.updateBook(id, bookDTO)).thenReturn(book);
+		 when(bookService.updateBook(anyLong(), any(BookDTO.class))).thenReturn(book);
 		
 		// then
 		this.mockMvc.perform(put("/api/v1/books/" + id)
