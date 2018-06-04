@@ -53,21 +53,16 @@ public class LoginControllerTest {
     }
 
     @Test
-    public void testLoginTest() throws Exception {
+    public void testLoginPostTest() throws Exception {
         // given
         String username = "username";
         String password = "password";
-        User user = new User();
-        user.setUsername(username);
-        user.setPassword(password);
-        user.setEmail("test@gmail.com");
-        user.setId(1L);
-        user.setPhone("0912345678");
         // when
         when(userRepository.findByUsernameAndPassword(username, password))
-                .thenReturn(Optional.of(user));
+                .thenReturn(Optional.of(new User()));
         // then
-        this.mockMvc.perform(get("/login")
+        this.mockMvc.perform(post("/login")
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                 .param("username", username)
                 .param("password", password))
                 .andExpect(status().isOk())
@@ -107,8 +102,8 @@ public class LoginControllerTest {
                 .param("email", email)
                 .param("phone", phone))
                 .andExpect(status().isFound())
-                .andExpect(view().name("redirect:/login"))
                 .andExpect(redirectedUrl("/login"))
+                .andExpect(view().name("redirect:/login"))
                 .andExpect(model().errorCount(0));
 
     }
