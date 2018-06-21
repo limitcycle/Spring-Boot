@@ -27,82 +27,72 @@ import com.example.api.service.BookService;
 @RestController
 @RequestMapping("api/v1")
 public class BookController {
-	
-	@Autowired
-    private BookService bookService;
-	
-	/**
-	 * 獲取書單列表
-	 * @return
-	 */
-	@GetMapping("/books")
-    public ResponseEntity<?> listAllBooks() {
-        List<Book> books = bookService.findAllBooks();
-        if (CollectionUtils.isEmpty(books)) {
-            throw new NotFoundException("Books Not Found");
-        }
-        return new ResponseEntity<>(books, HttpStatus.OK);
+
+  @Autowired
+  private BookService bookService;
+
+  /**
+   * 獲取書單列表
+   */
+  @GetMapping("/books")
+  public ResponseEntity<?> listAllBooks() {
+    List<Book> books = bookService.findAllBooks();
+    if (CollectionUtils.isEmpty(books)) {
+      throw new NotFoundException("Books Not Found");
     }
-	
-	/**
-	 * 獲取一個書單
-	 * @param id
-	 * @return
-	 */
-	@GetMapping("/books/{id}")
-    public ResponseEntity<?> getBook(@PathVariable long id) {
-        Book book = bookService.getBookById(id);
-        return new ResponseEntity<>(book, HttpStatus.OK);
+    System.out.println(books.toString());
+    return new ResponseEntity<>(books, HttpStatus.OK);
+  }
+
+  /**
+   * 獲取一個書單
+   */
+  @GetMapping("/books/{id}")
+  public ResponseEntity<?> getBook(@PathVariable long id) {
+    Book book = bookService.getBookById(id);
+    return new ResponseEntity<>(book, HttpStatus.OK);
+  }
+
+  /**
+   * 新增一個書單
+   */
+  @PostMapping("/books")
+  public ResponseEntity<?> saveBook(@Valid @RequestBody BookDTO bookDTO,
+      BindingResult bindingResult) {
+    if (bindingResult.hasErrors()) {
+      throw new InvalidRequestException("Invalid parameter", bindingResult);
     }
-	
-	/**
-	 * 新增一個書單
-	 * @param bookDTO
-	 * @param bindingResult
-	 * @return
-	 */
-	@PostMapping("/books")
-    public ResponseEntity<?> saveBook(@Valid @RequestBody BookDTO bookDTO, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            throw new InvalidRequestException("Invalid parameter", bindingResult);
-        }
-        Book book1 = bookService.saveBook(bookDTO.convertToBook());
-        return new ResponseEntity<>(book1, HttpStatus.CREATED);
-    }
-	
-	/**
-	 * 更新一個書單
-	 * @param id
-	 * @param bookDTO
-	 * @return
-	 */
-	@PutMapping("/books/{id}")
-	public ResponseEntity<?> updateBook(@PathVariable long id, @Valid @RequestBody BookDTO bookDTO) {
+    Book book1 = bookService.saveBook(bookDTO.convertToBook());
+    return new ResponseEntity<>(book1, HttpStatus.CREATED);
+  }
+
+  /**
+   * 更新一個書單
+   */
+  @PutMapping("/books/{id}")
+  public ResponseEntity<?> updateBook(@PathVariable long id, @Valid @RequestBody BookDTO bookDTO) {
 //		if (bindingResult.hasErrors()) {
 //			throw new InvalidRequestException("Invalid parameter", bindingResult);
 //		}
-		Book book = bookService.updateBook(id, bookDTO);
-		return new ResponseEntity<>(book, HttpStatus.OK);
-	}
-	
-	/**
-	 * 刪除一個書單
-	 * @param id
-	 * @return
-	 */
-	@DeleteMapping("/books/{id}")
-    public ResponseEntity<?> deleteBook(@PathVariable long id) {
-        bookService.deleteBookById(id);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
-	
-	/**
-	 * 刪除所有書單
-	 * @return
-	 */
-	@DeleteMapping("/books")
-    public ResponseEntity<?> deleteAllBooks() {
-        bookService.deleteAllBooks();
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
+    Book book = bookService.updateBook(id, bookDTO);
+    return new ResponseEntity<>(book, HttpStatus.OK);
+  }
+
+  /**
+   * 刪除一個書單
+   */
+  @DeleteMapping("/books/{id}")
+  public ResponseEntity<?> deleteBook(@PathVariable long id) {
+    bookService.deleteBookById(id);
+    return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+  }
+
+  /**
+   * 刪除所有書單
+   */
+  @DeleteMapping("/books")
+  public ResponseEntity<?> deleteAllBooks() {
+    bookService.deleteAllBooks();
+    return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+  }
 }
