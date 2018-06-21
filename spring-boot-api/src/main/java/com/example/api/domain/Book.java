@@ -1,54 +1,18 @@
 package com.example.api.domain;
 
+import com.example.api.domain.vo.Author;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import lombok.Data;
 
+@Data
 @Entity
-public class Book {
-	
-	@Id
-    @GeneratedValue
-    private long id;
-    private String author;
-    private String description;
-    private String name;
-    private int status;
-    
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getAuthor() {
-		return author;
-	}
-	public void setAuthor(String author) {
-		this.author = author;
-	}
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Integer getStatus() {
-		return status;
-	}
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-	
-	@Override
-	public String toString() {
-		return "Book [id=" + id + ", author=" + author + ", description=" + description + ", name=" + name + ", status="
-				+ status + "]";
-	}
+public class Book extends EntityBase<Book> {
+
+  @Embedded
+  private Author author;
+  private String description;
+  private String name;
+  private int status;
+
 }
