@@ -2,4 +2,4 @@ logging:
   level:
     root: info
     com.example: debug
-  file: devlog/my.log  
+  file: devlog/my.log

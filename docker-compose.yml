@@ -1,0 +1,23 @@
+version: '3'
+
+services: 
+  docker-mysql:
+    container_name: mysql  
+    image: mysql_utfmb4
+    volumes:
+      - /Users/jhchen/docker/mysql/lib:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=spring_boot
+      - MYSQL_PASSWORD=root
+  app:
+    build: ./spring-boot-advance
+    working_dir: /spring-boot-advance
+    volumes:
+      - ./spring-boot-advance:/spring-boot-advance
+      - ~/.m2:/root/.m2
+    ports:
+      - 8080:8080
+    depends_on:
+      - docker-mysql
+    command: mvn clean spring-boot:run -Dspring-boot.run.profiles=docker
