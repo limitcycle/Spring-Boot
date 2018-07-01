@@ -12,7 +12,6 @@ import lombok.Data;
 public class Book extends EntityBase<Book> {
 
   @Embedded
-  @AttributeOverride(name="name", column=@Column(name="author"))
   private Author author;
   private String description;
   private String name;

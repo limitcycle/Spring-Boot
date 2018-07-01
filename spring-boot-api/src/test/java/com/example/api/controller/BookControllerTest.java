@@ -89,7 +89,7 @@ public class BookControllerTest {
     // then
     mockMvc.perform(get("/api/v1/books/" + id))
         .andExpect(status().isOk())
-        .andExpect(jsonPath("$.author", is(book.getAuthor())));
+        .andExpect(jsonPath("$.author.name", is(book.getAuthor().getName())));
   }
 
   @Test
@@ -127,7 +127,7 @@ public class BookControllerTest {
     this.mockMvc.perform(post("/api/v1/books")
         .contentType(MediaType.APPLICATION_JSON).content(bookAsString))
         .andExpect(status().isCreated())
-        .andExpect(jsonPath("$.author", is(book.getAuthor())));
+        .andExpect(jsonPath("$.author.name", is(book.getAuthor().getName())));
   }
 
   @Test
@@ -162,7 +162,7 @@ public class BookControllerTest {
     this.mockMvc.perform(put("/api/v1/books/" + id)
         .contentType(MediaType.APPLICATION_JSON).content(bookAsString))
         .andExpect(status().isOk())
-        .andExpect(jsonPath("$.author", is(book.getAuthor())));
+        .andExpect(jsonPath("$.author.name", is(book.getAuthor().getName())));
   }
 
   @Test

@@ -3,9 +3,12 @@ package com.example.api.dto;
 import com.example.api.domain.Book;
 import com.example.api.domain.vo.Author;
 import com.example.api.util.CustomBeanUtils;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PositiveOrZero;
+import javax.validation.constraints.Size;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.beans.BeanUtils;
@@ -15,12 +18,16 @@ public class BookDTO {
 
   @NotNull(groups = {ValidationFirst.class})
   private Author author;
+
   @Length(max = 20, groups = {ValidationFirst.class})
   private String description;
+
   @NotBlank(groups = {ValidationFirst.class})
   private String name;
+
   @PositiveOrZero(groups = {ValidationFirst.class})
-  @Length(max = 2, groups = {ValidationFirst.class})
+  @Min(0)
+  @Max(99)
   private Integer status;
 
 
