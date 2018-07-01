@@ -45,7 +45,7 @@ public class BookControllerTest {
   public void givenBook_whenGetBooks_thenReturnJson() throws Exception {
     // given
     Book book1 = new Book();
-    book1.setId(Long.valueOf(1));
+    book1.setId(1);
     Author author = new Author();
     author.setName("author1");
     book1.setAuthor(author);
@@ -108,7 +108,9 @@ public class BookControllerTest {
     // given
     // DB的seq要怎處理?? (id)
     BookDTO bookDTO = new BookDTO();
-    bookDTO.setAuthor("author");
+    Author author = new Author();
+    author.setName("author");
+    bookDTO.setAuthor(author);
     bookDTO.setDescription("description");
     bookDTO.setName("name");
     bookDTO.setStatus(1);
@@ -133,12 +135,14 @@ public class BookControllerTest {
     // given
     long id = 1;
     BookDTO bookDTO = new BookDTO();
-    bookDTO.setAuthor("author");
+    Author author = new Author();
+    author.setName("author");
+    bookDTO.setAuthor(author);
     bookDTO.setDescription("description");
     bookDTO.setName("name");
     bookDTO.setStatus(1);
 
-    Author author = new Author();
+    author = new Author();
     author.setName("author");
     Book book = new Book();
     book.setId(id);

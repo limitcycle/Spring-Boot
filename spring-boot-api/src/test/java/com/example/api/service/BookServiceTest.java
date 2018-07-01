@@ -91,12 +91,13 @@ public class BookServiceTest {
   public void updateBook() {
     long id = 1;
     BookDTO bookDTO = new BookDTO();
-    bookDTO.setAuthor("author");
+    Author author = new Author();
+    author.setName("name");
+    bookDTO.setAuthor(author);
     bookDTO.setDescription("description");
     bookDTO.setName("name");
     bookDTO.setStatus(2);
 
-    Author author = new Author();
     author.setName("book author");
     Book currentBook = new Book();
     currentBook.setAuthor(author);

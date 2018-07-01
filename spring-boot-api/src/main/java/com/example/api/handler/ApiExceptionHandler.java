@@ -1,8 +1,13 @@
 package com.example.api.handler;
 
+import com.example.api.exception.InvalidRequestException;
+import com.example.api.exception.NotFoundException;
+import com.example.api.resource.FieldResource;
+import com.example.api.resource.InvalidErrorResource;
 import java.util.ArrayList;
 import java.util.List;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
@@ -11,13 +16,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.example.api.exception.InvalidRequestException;
-import com.example.api.exception.NotFoundException;
-import com.example.api.resource.FieldResource;
-import com.example.api.resource.InvalidErrorResource;
-
 @RestControllerAdvice
 public class ApiExceptionHandler {
+
+  private final Logger logger = LoggerFactory.getLogger(ApiExceptionHandler.class);
 
   /**
    * 處理找不到書異常
@@ -58,7 +60,7 @@ public class ApiExceptionHandler {
   @ExceptionHandler(Exception.class)
   @ResponseBody
   public ResponseEntity<?> handleException(Exception e) {
-//       logger.error("Error ---- {}", e);
+    logger.error("Error ---- {}", e);
     return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
   }
 }

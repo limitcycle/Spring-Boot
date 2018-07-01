@@ -1,14 +1,19 @@
 package com.example.api.controller;
 
+import com.example.api.domain.Book;
+import com.example.api.dto.BookDTO;
+import com.example.api.dto.ValidationFirst;
+import com.example.api.exception.InvalidRequestException;
+import com.example.api.exception.NotFoundException;
+import com.example.api.service.BookService;
 import java.util.List;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.CollectionUtils;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,12 +22,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.example.api.domain.Book;
-import com.example.api.dto.BookDTO;
-import com.example.api.exception.InvalidRequestException;
-import com.example.api.exception.NotFoundException;
-import com.example.api.service.BookService;
 
 @RestController
 @RequestMapping("api/v1")
@@ -40,7 +39,6 @@ public class BookController {
     if (CollectionUtils.isEmpty(books)) {
       throw new NotFoundException("Books Not Found");
     }
-    System.out.println(books.toString());
     return new ResponseEntity<>(books, HttpStatus.OK);
   }
 
@@ -57,7 +55,7 @@ public class BookController {
    * 新增一個書單
    */
   @PostMapping("/books")
-  public ResponseEntity<?> saveBook(@Valid @RequestBody BookDTO bookDTO,
+  public ResponseEntity<?> saveBook(@Validated({ValidationFirst.class}) @RequestBody BookDTO bookDTO,
       BindingResult bindingResult) {
     if (bindingResult.hasErrors()) {
       throw new InvalidRequestException("Invalid parameter", bindingResult);

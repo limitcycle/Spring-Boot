@@ -1,25 +1,26 @@
 package com.example.api.dto;
 
+import com.example.api.domain.Book;
+import com.example.api.domain.vo.Author;
+import com.example.api.util.CustomBeanUtils;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-
+import javax.validation.constraints.PositiveOrZero;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.beans.BeanUtils;
 
-import com.example.api.domain.Book;
-import com.example.api.util.CustomBeanUtils;
-
 @Data
 public class BookDTO {
 
-  @NotBlank
-  private String author;
-  @Length(max = 20)
+  @NotNull(groups = {ValidationFirst.class})
+  private Author author;
+  @Length(max = 20, groups = {ValidationFirst.class})
   private String description;
-  @NotBlank
+  @NotBlank(groups = {ValidationFirst.class})
   private String name;
-  @NotNull
+  @PositiveOrZero(groups = {ValidationFirst.class})
+  @Length(max = 2, groups = {ValidationFirst.class})
   private Integer status;
 
 
